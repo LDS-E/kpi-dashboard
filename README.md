@@ -26,6 +26,6 @@ The KPI Dashboard is a web application designed to provide real-time insights fo
 - Node.js and npm (for frontend)
 - PostgreSQL (or SQLite for development)
 
-##
+## 👥 Authors
 
 Developed by: LDS-E
