@@ -14,6 +14,11 @@ def get_db():
     finally:
         db.close()
 
+
+@app.get("/")
+async def root():
+    return {"message": "Hello, finally working!"}
+
 @app.get("/kpis", response_model=List[schemas.KPIResponse]) 
 async def list_kpis(db: Session = Depends(get_db)):
     kpis = db.query(models.KPI).all()
