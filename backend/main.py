@@ -1,33 +1,16 @@
-from fastapi import FastAPI, Depends, HTTPException
-from sqlalchemy.orm import Session
-from typing import List
+from fastapi import FastAPI
+from .database import test_connection
+from .core.config import get_db  # Importa get_db de config.py
+from .api.endpoints import kpis, users, auth
 
-from . import models, schemas  
-from .database import SessionLocal
+app = FastAPI(title="KPI Dashboard API")
 
-app = FastAPI()
+test_connection()  # Testa a conexão com o banco de dados
 
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
-
+app.include_router(kpis.router, prefix="/kpis", tags=["KPIs"])
+app.include_router(users.router, prefix="/users", tags=["Users"])
+app.include_router(auth.router, prefix="/auth", tags=["Authentication"])
 
 @app.get("/")
-async def root():
-    return {"message": "Hello, finally working!"}
-
-@app.get("/kpis", response_model=List[schemas.KPIResponse]) 
-async def list_kpis(db: Session = Depends(get_db)):
-    kpis = db.query(models.KPI).all()
-    return kpis
-
-@app.post("/kpis", response_model=schemas.KPIResponse)  
-async def create_kpi(kpi: schemas.KPICreate, db: Session = Depends(get_db)):
-    db_kpi = models.KPI(**kpi.dict())  
-    db.add(db_kpi)
-    db.commit()
-    db.refresh(db_kpi)  
-    return db_kpi
+def root():
+    return {"message": "Welcome to KPI Dashboard API"}
