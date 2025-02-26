@@ -1,5 +1,5 @@
 from sqlalchemy import text
-from .core.config import engine, SessionLocal  # Importa engine e SessionLocal
+from .core.config import engine, SessionLocal  
 from sqlalchemy.orm import declarative_base
 
 
@@ -10,9 +10,9 @@ def test_connection():
     try:
         db = SessionLocal()
         db.execute(text("SELECT 1"))
-        print("✅ Conexão com o banco de dados bem-sucedida!")
+        print("✅ Database connection successful!")
     except Exception as e:
-        print("❌ Erro ao conectar ao banco de dados:", e)
+        print("❌ Error connecting to database:", e)
     finally:
         db.close()
 

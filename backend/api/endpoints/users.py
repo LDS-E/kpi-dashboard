@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
-from ...schemas.user import UserCreate, UserResponse  # Importações explícitas
-from ...services.user_service import create_user, get_user_by_email # Importa as funções do service
+from ...schemas.user import UserCreate, UserResponse  
+from ...services.user_service import create_user, get_user_by_email 
 from backend.core.config import get_db
 
 router = APIRouter()

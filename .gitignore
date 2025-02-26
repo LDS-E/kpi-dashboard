@@ -25,3 +25,9 @@ __pycache__/
 # Ignorar arquivos temporários de build
 *.bak
 *.swp
+
+alembic/versions/
+
+scripts/
+
+alembic.ini

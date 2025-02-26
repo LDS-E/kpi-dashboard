@@ -2,8 +2,8 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from typing import List
 
-from ...schemas.kpi import KPICreate, KPIResponse  # Importação corrigida e explícita
-from ...services.kpi_service import get_kpis, create_kpi # Importa as funções do service
+from ...schemas.kpi import KPICreate, KPIResponse  
+from ...services.kpi_service import get_kpis, create_kpi 
 from backend.core.config import get_db
 
 router = APIRouter()

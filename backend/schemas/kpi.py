@@ -1,16 +1,33 @@
-from pydantic import BaseModel
-from typing import Optional
+from pydantic import BaseModel, constr, condecimal, Field
+from typing import Optional, Union
+from enum import Enum
+from datetime import datetime
 
-class KPIBase(BaseModel):
-    name: str
-    value: float
-    description: Optional[str] = None
+class DataType(str, Enum):
+    NUMBER = "number"
+    TEXT = "text"
+    DATE = "date"
 
-class KPICreate(KPIBase):
-    pass
 
-class KPIResponse(KPIBase):
+class KPICreate(BaseModel):
+    name: constr(min_length=3)
+    data_type: DataType
+    data: Union[condecimal(decimal_places=2), str, datetime]  
+    unit: Optional[str] = None
+    source: Optional[str] = None
+    category: Optional[str] = None
+    description: Optional[constr(max_length=255)] = None
+
+class KPIResponse(BaseModel):
     id: int
+    name: str
+    data_type: DataType
+    data: Union[float, str, datetime]
+    unit: Optional[str] = None
+    source: Optional[str] = None
+    category: Optional[str] = None
+    description: Optional[str] = None
+    timestamp: datetime
 
     class Config:
         from_attributes = True
