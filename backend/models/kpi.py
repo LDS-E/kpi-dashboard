@@ -16,7 +16,7 @@ class KPI(Base):
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String)
     data_type = Column(Enum(DataType))
-    data = Column(Text) # Armazena dados variados como texto
+    data = Column(Text) 
     unit = Column(String, nullable=True)
     source = Column(String, nullable=True)
     category = Column(String, nullable=True)

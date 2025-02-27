@@ -9,7 +9,7 @@ test_connection()
 
 app.include_router(kpis.router, prefix="/kpis", tags=["KPIs"])
 app.include_router(users.router, prefix="/users", tags=["Users"])
-app.include_router(auth.router, prefix="/auth", tags=["Authentication"])
+app.include_router(auth.router, tags=["Authentication"])
 
 @app.get("/")
 def root():

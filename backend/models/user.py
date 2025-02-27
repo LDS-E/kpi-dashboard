@@ -1,16 +1,17 @@
-from sqlalchemy import Column, Integer, String, Boolean, DateTime, Enum as SQLEnum
+from sqlalchemy import Column, Integer, String, Boolean, DateTime
 from sqlalchemy.orm import relationship
 from datetime import datetime
-from enum import Enum as PyEnum
+from enum import Enum
+
 from ..database import Base
 
-class JobTitle(PyEnum):
+class JobTitle(Enum):
     HEAD = "Head"
     MANAGER = "Manager"
     SALES_REP = "Sales Rep"
     ANALYST = "Analyst"
 
-class DepartmentName(PyEnum):
+class DepartmentName(Enum):
     MARKETING = "Marketing"
     SALES = "Sales"
     REVENUE = "Revenue"
@@ -27,8 +28,8 @@ class User(Base):
     id = Column(Integer, primary_key=True, index=True)
     email = Column(String, unique=True, index=True)
     hashed_password = Column(String)
-    job_title = Column(SQLEnum(JobTitle))
-    department_name = Column(SQLEnum(DepartmentName))
+    job_title = Column(String)  
+    department_name = Column(String)  
     company = Column(String)
     is_active = Column(Boolean, default=True)
     created_at = Column(DateTime, default=datetime.utcnow)
