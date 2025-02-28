@@ -1,0 +1,33 @@
+# Ignorar a pasta venv (ambiente virtual)
+venv/
+
+# Ignorar arquivos do sistema operacional (exemplo para macOS)
+.DS_Store
+
+# Ignorar arquivos de configuração do editor (exemplo para VS Code)
+.vscode/
+
+# Ignorar arquivos de logs
+*.log
+
+# Ignorar arquivos de banco de dados SQLite (se aplicável)
+*.sqlite3
+
+# Ignorar arquivos de dependências do Python, caso não estejam no requirements.txt
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar arquivos de ambiente
+.env
+
+# Ignorar arquivos temporários de build
+*.bak
+*.swp
+
+alembic/versions/
+
+scripts/
+
+alembic.ini
