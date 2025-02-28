@@ -1,0 +1,11 @@
+# Make sure your virtual environment is activated before installing dependencies.
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary 
+alembic
+pydantic
+python-jose[cryptography]
+passlib[bcrypt]
+python-multipart
+faker
