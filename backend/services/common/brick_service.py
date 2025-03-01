@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from ..schemas.brick import BrickCreate, BrickResponse
-from ...models.brick import Brick
+from backend.schemas.common.brick import BrickCreate, BrickResponse
+from backend.models.common.brick import Brick
 from sqlalchemy.exc import IntegrityError
 
 def create_brick(db: Session, brick: BrickCreate):
