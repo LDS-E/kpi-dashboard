@@ -9,5 +9,5 @@ class City(Base):
     name = Column(String)
     state_id = Column(Integer, ForeignKey("states.id"))  
 
-    state = relationship("State", back_populates="cities")
+   
    
