@@ -6,8 +6,6 @@ class Country(Base):
     __tablename__ = "countries"
 
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, unique=True)  # Nome único do país
+    name = Column(String, unique=True)  
 
 
-    states = relationship("State", back_populates="country")
-   

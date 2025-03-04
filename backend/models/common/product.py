@@ -6,4 +6,5 @@ class Product(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String)
-    category = Column(String)
+    category = Column(String) 
+    molecule = Column(String)

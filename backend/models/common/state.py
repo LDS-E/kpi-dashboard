@@ -10,6 +10,4 @@ class State(Base):
     uf = Column(String(2), unique=True, index=True) 
     country_id = Column(Integer, ForeignKey("countries.id"))  
 
-    country = relationship("Country", back_populates="states")
-
-    cities = relationship("City", back_populates="state")
+   
