@@ -7,3 +7,4 @@ from .common.city import City
 from .common.sales_channel import SalesChannel
 from .common.sales_sub_channel import SalesSubChannel
 from .common.brick import Brick
+from .sellout.mdtr.mdtr import MDTR 
