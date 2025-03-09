@@ -6,7 +6,7 @@ class City(Base):
     __tablename__ = "cities"
 
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String)
+    city_name = Column(String)
     state_id = Column(Integer, ForeignKey("states.id"))  
 
    

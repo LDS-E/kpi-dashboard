@@ -1,4 +1,4 @@
-# schemas/mdtr.py
+
 from pydantic import BaseModel
 
 class MdtrAuditBase(BaseModel):

@@ -1,8 +1,8 @@
 from sqlalchemy import Column, Integer, String
 from backend.database import Base
 
-class SalesChannel(Base):
-    __tablename__ = "sales_channels"
+class Category(Base):
+    __tablename__ = "categories"
 
     id = Column(Integer, primary_key=True, index=True)
-    sales_channel_name = Column(String)
+    category_name = Column(String, nullable=False, unique=True)

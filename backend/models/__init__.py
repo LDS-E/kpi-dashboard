@@ -7,4 +7,6 @@ from .common.city import City
 from .common.sales_channel import SalesChannel
 from .common.sales_sub_channel import SalesSubChannel
 from .common.brick import Brick
-from .sellout.mdtr.mdtr import MDTR 
+from .common.molecule import Molecule
+from .common.category import Category
+from .sellout.mdtr.mdtr import MDTR
