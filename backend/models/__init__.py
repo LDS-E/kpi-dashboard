@@ -9,4 +9,5 @@ from .common.sales_sub_channel import SalesSubChannel
 from .common.brick import Brick
 from .common.molecule import Molecule
 from .common.category import Category
+from .common.product_price import ProductPrice
 from .sellout.mdtr.mdtr import MDTR

@@ -22,4 +22,5 @@ class MDTR(Base):
     units_sold = Column(Integer)
     category_id = Column(Integer, ForeignKey("categories.id"), nullable=False, index=True)
     molecule_id = Column(Integer, ForeignKey("molecules.id"), nullable=False, index=True)
+    pharma_name = Column(String)
 
