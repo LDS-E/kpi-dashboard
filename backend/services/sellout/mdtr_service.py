@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from backend.models.sellout.mdtr import MDTR
+from backend.models.sellout.mdtr.mdtr import MDTR
 from backend.schemas.sellout.mdtr import MdtrAuditCreate
 
 def create_mdtr_audit(db: Session, mdtr_data: MdtrAuditCreate):
