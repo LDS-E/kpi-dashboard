@@ -11,3 +11,4 @@ from .common.molecule import Molecule
 from .common.category import Category
 from .common.product_price import ProductPrice
 from .sellout.mdtr.mdtr import MDTR
+from .sellout.ddd.ddd import DDD
