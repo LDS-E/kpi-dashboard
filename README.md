@@ -1,6 +1,6 @@
 # KPI Dashboard
 
-The KPI Dashboard is a web application designed to provide real-time insights for businesses, specifically within the pharmaceutical industry, and their advisory boards. It offers interactive, data-driven visualizations that help decision-makers efficiently monitor key performance indicators (KPIs) related to sales, market share, and other relevant metrics.
+The KPI Dashboard is a PowerBI dash designed to provide real-time insights for businesses, specifically within the pharmaceutical industry, and their advisory boards. It offers interactive, data-driven visualizations that help decision-makers efficiently monitor key performance indicators (KPIs) related to sales, market share, and other relevant metrics.
 
 ## 🚀 Features
 
