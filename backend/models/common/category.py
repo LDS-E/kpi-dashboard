@@ -1,9 +1,8 @@
 from sqlalchemy import Column, Integer, String
 from backend.database import Base
 
-class Product(Base):
-    __tablename__ = "products"
+class Category(Base):
+    __tablename__ = "categories"
 
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String)
-    category = Column(String)
+    category_name = Column(String, nullable=False, unique=True)

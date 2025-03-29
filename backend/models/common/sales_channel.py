@@ -5,4 +5,4 @@ class SalesChannel(Base):
     __tablename__ = "sales_channels"
 
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String)
+    sales_channel_name = Column(String)
