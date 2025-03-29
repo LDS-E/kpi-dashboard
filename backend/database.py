@@ -10,9 +10,9 @@ def test_connection():
     try:
         db = SessionLocal()
         db.execute(text("SELECT 1"))
-        print("✅ Database connection successful!")
+        print("Database connection successful!")
     except Exception as e:
-        print("❌ Error connecting to database:", e)
+        print("Error connecting to database:", e)
     finally:
         db.close()
 
