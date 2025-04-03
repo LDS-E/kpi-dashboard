@@ -1,5 +1,5 @@
 from sqlalchemy import text
-from .core.config import engine, SessionLocal  
+from backend.core.config import engine, SessionLocal  
 from sqlalchemy.orm import declarative_base
 
 
